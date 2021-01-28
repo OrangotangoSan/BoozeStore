@@ -1,6 +1,6 @@
 FROM openjdk:11
 
-COPY ./target/*.jar /usr/app/
+COPY ./boozeApp/target/*.jar /usr/app/
 
 WORKDIR /usr/app
 

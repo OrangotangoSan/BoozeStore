@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/BoozeStore.iml" filepath="$PROJECT_DIR$/.idea/BoozeStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boozeApp/boozeApp.iml" filepath="$PROJECT_DIR$/boozeApp/boozeApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supla-2/supla-2.iml" filepath="$PROJECT_DIR$/supla-2/supla-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supla1/supla1.iml" filepath="$PROJECT_DIR$/supla1/supla1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supla3/supla3.iml" filepath="$PROJECT_DIR$/supla3/supla3.iml" />
+    </modules>
+  </component>
+</project>

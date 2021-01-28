@@ -8,14 +8,16 @@
 		<version>2.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.boozeApp</groupId>
-	<artifactId>boozeApp</artifactId>
+	<groupId>com.suppliers</groupId>
+	<artifactId>supla1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>boozeApp</name>
+	<name>supla1</name>
 	<description>Demo project for Spring Boot</description>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -1,0 +1,77 @@
+services:
+    db:
+        image: mysql5
+        container_name: db_booze
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        build:
+            context: .
+            dockerfile: ./dataSource/Dockerfile
+        environment:
+            MYSQL_ROOT_PASSWORD: 123
+            MYSQL_USER: root
+            MYSQL_PASSWORD: 123
+            MYSQL_DATABASE: db_booze 
+        ports:
+            - "3306:3306"
+        networks:
+            - booze_network
+    supla1:
+        image: suppliera
+        container_name: suppliera
+        build:
+            context: .
+            dockerfile: ./supla1/Dockerfile
+        restart: always
+        ports:
+            - "8080:8080"
+        networks:
+            - booze_network
+        links:
+            - db
+        depends_on:
+            - db
+    supla-2:
+        image: supplierb
+        container_name: supplierb
+        build:
+            context: .
+            dockerfile: ./supla2/Dockerfile
+        restart: always
+        ports:
+            - "8081:8080"
+        networks:
+            - booze_network
+        depends_on:
+            - db
+    supla3:
+        image: supplierc
+        container_name: supplierc
+        build:
+            context: .
+            dockerfile: ./supla3/Dockerfile
+        restart: always
+        ports:
+            - "8082:8080"
+        networks:
+            - booze_network
+        depends_on:
+            - db
+    boozeApp:
+        image: booze_app
+        container_name: booze_app
+        build:
+            context: .
+            dockerfile: ./boozeApp/Dockerfile
+        restart: always
+        ports:
+            - "8083:8080"
+        networks:
+            - booze_network
+        depends_on:
+            - supla1
+            - supla-2
+            - supla3
+networks:
+    booze_network:
+        driver: bridge
