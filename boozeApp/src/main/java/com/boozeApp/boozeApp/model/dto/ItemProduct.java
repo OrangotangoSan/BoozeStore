@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 
@@ -14,11 +15,13 @@ public class ItemProduct {
 
     @Id
     private Long id;
+    private BigDecimal totalCost;
     @ManyToOne
-    //missing join column name product_id --- Parei aki
+    @JoinColumn(name = "product_id")
+    private Order order;
+    @ManyToOne
+    @JoinColumn(name = "product_id")
     private Product product;
 
-    //missing order
-    private BigDecimal totalCost;
     private int quantity;
 }
