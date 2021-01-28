@@ -17,7 +17,7 @@ public class ItemProduct {
     private Long id;
     private BigDecimal totalCost;
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "order_id")
     private Order order;
     @ManyToOne
     @JoinColumn(name = "product_id")
