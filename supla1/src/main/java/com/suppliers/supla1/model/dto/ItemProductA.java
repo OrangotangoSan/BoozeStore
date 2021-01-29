@@ -15,11 +15,11 @@ public class ItemProductA {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false)
-    private String nome;
-    @GeneratedValue(generator = "hibernate-uuid")
-    @GenericGenerator(name ="productCod", strategy = "uuid2")
-    @Column( unique = true)
+    private String name;
+
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private String productCod;
 
 }

@@ -1,7 +1,7 @@
 package com.supla2.supla2.controller;
 
 
-import com.supla2.supla2.model.ProductOrderRequestB;
+import com.supla2.supla2.model.dto.OrderRequestB;
 import com.supla2.supla2.repository.SupplierBrepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,12 +17,12 @@ public class SupplierBcontroller {
 
 
     @GetMapping
-    public List<ProductOrderRequestB> ordersList(){
+    public List<OrderRequestB> ordersList(){
         return supplierBrepository.findAll();
     }
 
     @PostMapping
-    public ProductOrderRequestB receiveRequest(@RequestBody ProductOrderRequestB request){
+    public OrderRequestB receiveRequest(@RequestBody OrderRequestB request){
         return supplierBrepository.save(request);
     }
 }
