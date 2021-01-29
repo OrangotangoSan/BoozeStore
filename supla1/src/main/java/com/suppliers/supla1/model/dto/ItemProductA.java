@@ -21,6 +21,5 @@ public class ItemProductA {
     @GenericGenerator(name ="productCod", strategy = "uuid2")
     @Column( unique = true)
     private String productCod;
-    private int quantity;
 
 }
