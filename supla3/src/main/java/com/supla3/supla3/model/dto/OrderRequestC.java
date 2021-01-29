@@ -1,4 +1,4 @@
-package com.supla3.supla3.model;
+package com.supla3.supla3.model.dto;
 
 
 import lombok.Data;
@@ -10,7 +10,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class ProductOrderRequestC {
+public class OrderRequestC {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
