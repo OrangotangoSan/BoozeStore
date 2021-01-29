@@ -1,7 +1,6 @@
-package com.suppliers.supla1.model.dto;
+package com.supla1.model.dto;
 
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
@@ -9,7 +8,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "supa_product")
-public class ItemProductA {
+public class ItemProduct {
 
 
     @Id
@@ -21,5 +20,7 @@ public class ItemProductA {
 
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private String productCod;
+
+    private int units;
 
 }

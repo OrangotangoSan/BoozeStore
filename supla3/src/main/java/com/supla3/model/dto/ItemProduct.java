@@ -1,4 +1,4 @@
-package com.supla3.supla3.model.dto;
+package com.supla3.model.dto;
 
 
 import lombok.Data;
@@ -19,4 +19,6 @@ public class ItemProduct {
 
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private String productCod;
+
+    private int units;
 }

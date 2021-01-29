@@ -1,8 +1,8 @@
-package com.supla3.supla3.controller;
+package com.supla3.controller;
 
 
-import com.supla3.supla3.model.dto.OrderRequestC;
-import com.supla3.supla3.repository.SupplierCrepository;
+import com.supla3.repository.SupplierCrepository;
+import com.supla3.model.request.OrderRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,12 +18,12 @@ public class SupplierCcontroller {
 
 
     @GetMapping
-    public List<OrderRequestC> ordersListB(){
+    public List<OrderRequest> ordersListC(){
         return supplierCrepository.findAll();
     }
 
     @PostMapping("/request")
-    public OrderRequestC receiveRequestC(@RequestBody OrderRequestC request){
+    public OrderRequest receiveRequestC(@RequestBody OrderRequest request){
         return supplierCrepository.save(request);
     }
 }

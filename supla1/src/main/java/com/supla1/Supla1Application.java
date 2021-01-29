@@ -1,4 +1,4 @@
-package com.suppliers.supla1;
+package com.supla1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

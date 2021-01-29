@@ -1,6 +1,6 @@
 FROM openjdk:11
 
-COPY ./supla3/target/*.jar /usr/app/
+COPY /supla3/target/*.jar /usr/app/
 
 WORKDIR /usr/app
 
