@@ -1,5 +1,4 @@
-package com.supla3.model.dto;
-
+package com.supla2.model.dto;
 
 import lombok.Data;
 
@@ -7,7 +6,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "supc_products")
+@Table(name = "supb_product")
 public class ItemProduct {
 
     @Id
