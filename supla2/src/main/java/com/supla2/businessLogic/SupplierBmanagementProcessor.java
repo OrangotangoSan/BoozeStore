@@ -6,9 +6,11 @@ import com.supla2.model.response.OrderResponse;
 import com.supla2.model.response.StatusOrder;
 import com.supla2.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+@Service
 public class SupplierBmanagementProcessor {
 
     @Autowired
