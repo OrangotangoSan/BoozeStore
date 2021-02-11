@@ -14,14 +14,13 @@ public class SupCcontroller {
 
 
 
-    @Autowired
-    private ProductRepository itemProductRepository;
+
     @Autowired
     private SupplierCManagementProcessor  supplierCManagementProcessor;
 
 
 
-    //TROCAR URL
+
     @PostMapping("/order")
     public OrderResponse receiveRequestC(@RequestBody OrderRequest request){
 

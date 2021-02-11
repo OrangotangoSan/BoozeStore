@@ -8,16 +8,25 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="supla-2" />
-        <module name="supla3" />
         <module name="boozeApp" />
         <module name="supla1" />
+      </profile>
+      <profile name="Annotation profile for supla3" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+        </processorPath>
+        <module name="supla3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="boozeApp" target="11" />
       <module name="supla-2" target="11" />
       <module name="supla1" target="11" />
-      <module name="supla3" target="11" />
+      <module name="supla3" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -20,8 +20,8 @@ public class SupplierCManagementProcessor {
 
 
 
-    public OrderResponse processOrderRequest(OrderRequest or) {
-        String productCode = or.getProductCode();
+        public OrderResponse processOrderRequest(OrderRequest or) {
+        String productCode = or.getProductCod();
 
        Product product = productRepository.findProductCode(productCode);
 

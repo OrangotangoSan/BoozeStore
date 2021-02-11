@@ -1,7 +1,9 @@
 package com.supla2.controller;
 
 
-import com.supla2.repository.SupplierBrepository;
+import com.supla2.businessLogic.SupplierBmanagementProcessor;
+import com.supla2.model.response.OrderResponse;
+import com.supla2.repository.ProductRepository;
 import com.supla2.model.request.OrderRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,16 +15,12 @@ import java.util.List;
 public class SupplierBcontroller {
 
     @Autowired
-    private SupplierBrepository supplierBrepository;
+    private SupplierBmanagementProcessor supplierBmanagementProcessor;
 
 
-    @GetMapping
-    public List<OrderRequest> ordersList(){
-        return supplierBrepository.findAll();
-    }
 
-    @PostMapping
-    public OrderRequest receiveRequest(@RequestBody OrderRequest request){
-        return supplierBrepository.save(request);
+    @PostMapping("/order")
+    public OrderResponse  processOrderRequest(@RequestBody OrderRequest request){
+        return supplierBmanagementProcessor.processOrderRequest(request);
     }
 }

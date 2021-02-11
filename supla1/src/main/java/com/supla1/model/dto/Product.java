@@ -3,12 +3,13 @@ package com.supla1.model.dto;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 
 @Data
 @Entity
 @Table(name = "supa_product")
-public class ItemProduct {
+public class Product {
 
 
     @Id
@@ -18,9 +19,11 @@ public class ItemProduct {
     @Column(nullable = false)
     private String name;
 
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private BigDecimal price;
+
+    @Column(name = "product_code")
     private String productCod;
 
-    private int units;
+    private int quantity;
 
 }

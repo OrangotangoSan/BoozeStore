@@ -31,7 +31,7 @@ services:
             - db
         depends_on:
             - db
-    supla-2:
+    supla2:
         image: supplierb
         container_name: supplierb
         build:
@@ -70,7 +70,7 @@ services:
             - booze_network
         depends_on:
             - supla1
-            - supla-2
+            - supla2
             - supla3
 networks:
     booze_network:
