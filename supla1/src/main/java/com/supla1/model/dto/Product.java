@@ -22,7 +22,7 @@ public class Product {
     private BigDecimal price;
 
     @Column(name = "product_code")
-    private String productCod;
+    private String productCode;
 
     private int quantity;
 

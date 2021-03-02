@@ -1,24 +1,25 @@
-package com.supla2.businessLogic;
+package com.supla2.businessRules;
 
 import com.supla2.model.dto.Product;
 import com.supla2.model.request.OrderRequest;
 import com.supla2.model.response.OrderResponse;
 import com.supla2.model.response.StatusOrder;
-import com.supla2.repository.ProductRepository;
+import com.supla2.repository.ProductRepositoryB;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
 @Service
-public class SupplierBmanagementProcessor {
+public class SupplierBManagementProcessor {
 
     @Autowired
-    private ProductRepository productRepository;
+    private ProductRepositoryB productRepositoryB;
 
     public OrderResponse processOrderRequest(OrderRequest or) {
+
         String productCode = or.getProductCode();
-        Product product = productRepository.findProductCode(productCode);
+        Product product = productRepositoryB.findProductByProductCode(productCode);
         OrderResponse orderResponse = new OrderResponse();
 
         if (product.getQuantity() < or.getQuantity()){
@@ -26,13 +27,12 @@ public class SupplierBmanagementProcessor {
             orderResponse.setStatusOrder(StatusOrder.KO);
         } else {
             product.setQuantity(product.getQuantity() - or.getQuantity());
-            productRepository.save(product);
-            orderResponse.setMessage("Order processed successfully");
+            productRepositoryB.save(product);
+            orderResponse.setMessage("Order processed succcessfully");
             orderResponse.setStatusOrder(StatusOrder.OK);
             BigDecimal quantity = new BigDecimal(or.getQuantity());
             orderResponse.setTotalAmount(product.getPrice().multiply(quantity));
         }
-
         return orderResponse;
     }
 }

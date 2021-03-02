@@ -21,9 +21,9 @@ public class SupplierCManagementProcessor {
 
 
         public OrderResponse processOrderRequest(OrderRequest or) {
-        String productCode = or.getProductCod();
+        String productCode = or.getProductCode();
 
-       Product product = productRepository.findProductCode(productCode);
+       Product product = productRepository.findProductByProductCode(productCode);
 
        OrderResponse orderResponse = new OrderResponse();
 

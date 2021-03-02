@@ -18,8 +18,8 @@ public class SupplierAManagementProcessor {
 
     public OrderResponse processOrderRequest(OrderRequest or) {
 
-        String productCode = or.getProductCod();
-        Product product = productRepositoryA.findProductCode(productCode);
+        String productCode = or.getProductCode();
+        Product product = productRepositoryA.findProductByProductCode(productCode);
         OrderResponse orderResponse = new OrderResponse();
 
         if (product.getQuantity() < or.getQuantity()){
@@ -36,5 +36,5 @@ public class SupplierAManagementProcessor {
         return orderResponse;
     }
 
-    //fazer la lógica
+
 }

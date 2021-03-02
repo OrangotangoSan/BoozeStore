@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 @Data
 @Entity
-@Table(name = "supc_products")
+@Table(name = "supc_product")
 public class Product {
 
     @Id

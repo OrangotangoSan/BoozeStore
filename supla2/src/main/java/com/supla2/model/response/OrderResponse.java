@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 @Data
 public class OrderResponse {
-    private StatusOrder statusOrder = StatusOrder.KO;
+    private StatusOrder statusOrder=StatusOrder.KO;
     private String message;
     private BigDecimal totalAmount;
 }
