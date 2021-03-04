@@ -1,7 +1,6 @@
 package com.boozeApp.boozeApp.controller;
 
 
-import com.boozeApp.boozeApp.model.dto.Product;
 import com.boozeApp.boozeApp.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
