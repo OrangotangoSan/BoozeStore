@@ -15,10 +15,11 @@ public class ProductDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
     private Long productId;
-    //COLOCAR RELAÇÃO
-    @Column(name = "supplier_id")
+
+    @ManyToOne
+    @JoinColumn(name = "supplier_id")
     private Long supplierId;
-    //COLOCAR RELAÇÃO
+
     @Column(name = "product_code")
     private String productCode;
     private String name;

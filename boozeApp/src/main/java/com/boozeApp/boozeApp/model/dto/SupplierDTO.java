@@ -12,6 +12,7 @@ public class SupplierDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "supplier_id")
+    @OneToMany(mappedBy = "products")
     private Long supplierId;
     @Column(name = "supplier_code")
     private String supplierCode;

@@ -11,6 +11,7 @@ public class OrderDTO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @OneToMany(mappedBy = "order_product")
     private Long orderID;
     @Column(name = "order_code")
     private String orderCode;
