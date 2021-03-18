@@ -13,8 +13,12 @@ public class OrderDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @OneToMany(mappedBy = "order_product")
     private Long orderID;
+
+    //todo colocar order code auto gerado - precisa ser unico!
     @Column(name = "order_code")
     private String orderCode;
+
+
     @Column(name = "client_name")
     private String clientName;
 }
