@@ -51,21 +51,23 @@ public class OrderManagementProcessor {
 
         orderItensList.forEach(item -> {
             ProductDTO productDTO = new ProductDTO();
+            // agora vai mandar a resquest de qualquer forma, sem validar qnt
+            // o cód do produto vai ser add manulamente, mas depois devve vir direto do fornecedor
 
-            //todo 1) fazer verificação na própria db por cod. produto e Qnt
 
-            //todo 1.a criar uma rota para add produtos na table produtos do APP
-            //todo 1.b verificar se o nome da table coincide com os já existentes
-            //todo 1.c fazer a mesma validação de product code e qnt dos suplas
+            //todo fazer um controller/rotas para adicionar produtos(seguindo o modelo do suppla)
+            //todo  fazer a mesma validação de product code dos suplas
 
-            //todo 2)  definir os suplas e suas Base Url's
-            //todo 2.a instaciar os produtos e suplas?
+            //todo definir rotas para adicionar suppliers
+            //todo definir os suplas e suas Base Url's
+            //todo instaciar os produtos e suplas?
 
             //todo 3) Fazer a request - video java/Spring
 
             //todo 4) fazer um handler da resposta do Supla, e usá-lo na response
-            //todo 4.a A reponse tem que conter tbm a order code!
-            //todo 4.a.a É a partir do order code que vai vir o join que chamamos de order product
+            //todo 4.a A reponse tem que conter tbm a order code, data e nome do cliente
+            //todo 4.a.a É a partir do order code que vai vir o join
+            // que chamamos de order product. orderCode->orderId->orderproduct
 
 
             productDTO.setProductCode(item.getProductCode());

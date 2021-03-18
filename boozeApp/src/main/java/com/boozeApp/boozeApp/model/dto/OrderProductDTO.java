@@ -20,7 +20,6 @@ public class OrderProductDTO {
     private Long orderId;
 
 
-
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Long productId;
