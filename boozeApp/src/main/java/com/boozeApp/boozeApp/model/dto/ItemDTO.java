@@ -6,8 +6,8 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "booze_products")
-public class ProductDTO {
+@Table(name = "items")
+public class ItemDTO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,10 +15,10 @@ public class ProductDTO {
 
     @ManyToOne
     @JoinColumn
-    private SupplierDTO supplier;
+    private OrderDTO order;
 
-    //todo pegar código dos suplas
-    private String productCode;
+    @OneToOne
+    private ProductDTO Product;
 
-    private String name;
+    private int quantity;
 }
