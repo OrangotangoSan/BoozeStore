@@ -3,7 +3,6 @@ package com.boozeApp.boozeApp.model.dto;
 import lombok.Data;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Data
@@ -20,7 +19,7 @@ public class SupplierDTO {
     private String baseUrl;
 
 
-    @OneToMany(mappedBy = "supplier", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "supplier")
     private List<ProductDTO> product;
 
 }
