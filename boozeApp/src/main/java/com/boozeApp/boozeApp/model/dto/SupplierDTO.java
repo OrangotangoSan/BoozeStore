@@ -15,11 +15,12 @@ public class SupplierDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "supplier")
-    private List<ProductDTO> product;
-
     private String name;
 
-    @NotBlank
     private String baseUrl;
+
+
+    @OneToMany(mappedBy = "supplier", cascade = CascadeType.ALL)
+    private List<ProductDTO> product;
+
 }

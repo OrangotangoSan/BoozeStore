@@ -20,7 +20,6 @@ public class ClientDTO {
     @OneToMany(mappedBy = "client")
     private List<OrderDTO> clientOrder;
 
-    @NotBlank
     private String name;
 
     private String email;

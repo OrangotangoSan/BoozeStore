@@ -19,7 +19,7 @@ public class OrderController {
     private OrderManagementProcessor orderManagementProcessor;
 
 
-    @PostMapping
+    @PostMapping("/add")
     public OrderResponse receiveNewOrder(@RequestBody @Valid OrderRequest or){
         return orderManagementProcessor.processOrderRequest(or);
     }

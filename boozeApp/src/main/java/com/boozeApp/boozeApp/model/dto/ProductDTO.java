@@ -13,12 +13,12 @@ public class ProductDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    private String name;
+
+    private String productCode;
+
+    @ManyToOne(cascade = CascadeType.REFRESH)
     @JoinColumn
     private SupplierDTO supplier;
 
-    //todo pegar código dos suplas
-    private String productCode;
-
-    private String name;
 }

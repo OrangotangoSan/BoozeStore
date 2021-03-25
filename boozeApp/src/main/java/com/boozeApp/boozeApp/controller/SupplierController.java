@@ -17,10 +17,9 @@ public class SupplierController {
     @Autowired
     private SupplierRepository supplierRepository;
 
-    //todo add suplas
-    //todo fazer review de todas as rotas
 
-    @PostMapping
+
+    @PostMapping("/add")
     public SupplierDTO addSupplier(@RequestBody SupplierDTO supplier){
         return supplierRepository.save(supplier);
     }
