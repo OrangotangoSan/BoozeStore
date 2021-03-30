@@ -3,6 +3,7 @@ package com.boozeApp.boozeApp.model.dto;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -17,7 +18,8 @@ public class ProductDTO {
 
     private String productCode;
 
-    @ManyToOne(cascade = CascadeType.REFRESH)
+
+    @ManyToOne
     @JoinColumn
     private SupplierDTO supplier;
 

@@ -19,6 +19,7 @@ public class SupplierDTO {
     private String baseUrl;
 
 
+
     @OneToMany(mappedBy = "supplier")
     private List<ProductDTO> product;
 

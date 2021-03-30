@@ -31,7 +31,6 @@ public class OrderManagementProcessor {
     @Autowired
     private ItemRepository itemRepository;
 
-//todo fazer o supplier handler
 
 
     public OrderResponse processOrderRequest(OrderRequest or){
@@ -58,6 +57,7 @@ public class OrderManagementProcessor {
 
             ProductDTO productDTO = productRepository.findProductByProductCode(item.getProductCode());
 
+            //fixme só salva 1 item, o último
             if (productDTO != null){
                 itemDTO.setProduct(productDTO);
                 itemDTO.setQuantity(item.getQuantity());
